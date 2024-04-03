@@ -1,0 +1,18 @@
+<app-search></app-search>
+<app-genre></app-genre>
+<app-not-found [visible]="!movies || movies.length <= 0" notFoundMessage="Movie not found !"
+    resetLinkText="Go to Homepage !"></app-not-found>
+<ul>
+    <li *ngFor="let movie of movies">
+        <a routerLink="/movie/{{movie.id}}">
+            <img src="{{movie.imageUrl}}" class="image" alt="image">
+            <div class="content">
+                <div class="title">
+                    {{movie.title}}
+                    <div class="star-symbol">{{movie.star}}</div>
+                </div>
+
+            </div>
+        </a>
+    </li>
+</ul>

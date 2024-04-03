@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+}
+
+.image img {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 550px;
+  object-fit: cover;
+  margin: 4rem;
+  border-radius: 4rem;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.detail {
+  flex: 1;
+  margin-top: 4rem;
+  margin-right: 5rem;
+}
+
+.header {
+  justify-content: space-between;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.title {
+  margin-right: 25rem;
+  color: aqua;
+}
+.star-symbol {
+  font-size: x-large;
+  margin-bottom: 2rem;
+}
+
+.body {
+  font-size: x-large;
+  margin-bottom: 0.7rem;
+}
+
+.buy {
+  border-radius: 10rem;
+  padding: 1rem;
+  background-color: green;
+  opacity: 0.8;
+  color: black;
+  font-weight: 500;
+  font-size: medium;
+  margin-right: 2rem;
+}
+.add-cart {
+  border-radius: 10rem;
+  padding: 1rem;
+  background-color: yellow;
+  opacity: 0.8;
+  color: black;
+  font-weight: 500;
+  font-size: medium;
+}
+div button:hover {
+  opacity: 1;
+  cursor: pointer;
+  color: black;
+}

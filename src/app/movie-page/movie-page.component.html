@@ -1,0 +1,36 @@
+<app-not-found [visible]="!movie" notFoundMessage="Movie Not Found !" resetLinkText="Go to Homepage !"></app-not-found>
+<div *ngIf="movie" class="container">
+    <div class="image">
+        <img [src]="movie.imageUrl" [alt]="movie.title">
+    </div>
+    <div class="detail">
+        <div class="header">
+            <span class="title">
+                {{movie.title}}
+            </span>
+            <span class="recomended {{movie.recomended?'':'not'}}">☆</span>
+        </div>
+        <div class="star-symbol">{{movie.star}}</div>
+        <div class="body">
+            <div class="director">Director : <span>{{movie.director}}</span></div>
+            <div class="genre">Genre : <span>{{movie.genre}}</span></div>
+            <div class="duration">Duration : <span>{{movie.duration}}</span></div>
+            <div class="language">Language : <span>{{movie.language}}</span></div>
+            <!-- <div class="origin">
+                <span *ngFor="let origin of movie.origin">
+                    Country of Origin : {{origin}}
+                </span>
+            </div> -->
+            <div class="release">
+                Release : <span>{{movie.release}}</span>
+            </div>
+            <span>Story Line</span>
+            <div class="description">{{movie.description}}</div>
+            <div class="price">Price : Rp<span>{{movie.price}}</span></div>
+        </div>
+        <div class="footer">
+            <button class="buy">Buy Now</button>
+            <button class="add-cart" (click)="addToCart()">Add To Cart</button>
+        </div>
+    </div>
+</div>
